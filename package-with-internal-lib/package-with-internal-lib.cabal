@@ -1,0 +1,20 @@
+name:                package-with-internal-lib
+version:             0.1.0.0
+license:             BSD3
+author:              Matthew Harm Bekkema
+maintainer:          mbekkema97@gmail.com
+category:            Demonstration
+build-type:          Simple
+cabal-version:       >=2
+
+library
+  exposed-modules:     Lib
+  build-depends:       base >=4.9 && <4.11
+                     , internal
+  default-language:    Haskell2010
+
+library internal
+  hs-source-dirs:      internal
+  exposed-modules:     Internal
+  build-depends:       base
+  default-language:    Haskell2010
